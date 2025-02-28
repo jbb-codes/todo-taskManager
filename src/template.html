@@ -9,6 +9,34 @@
 
 <body>
 
+    <div id="container">
+        <h1 id="todo-title">Todo Task Manager</h1>
+
+        <div id="project-container">
+            <h2>Projects</h2>
+            <button id="add-project-btn" type="button">Add Project</button>
+            <div class="project-list"></div>
+        </div>
+
+        <div id="form-container">
+            <form action="" method="">
+                <input type="text" id="task-input" placeholder="Enter Task">
+                <label for="task-input"></label>
+                <input type="date" id="date-input">
+                <label for="date-input"></label>
+                <select id="priority-input">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <label for="priority-input"></label>
+                <textarea name="description" id="description-input"></textarea>
+                <label for="description-input"></label>
+                <button id="add-task-btn" type="button">Add Task</button>
+            </form>
+        </div>
+        <div id="tasks"></div>
+    </div>
 </body>
 
 </html>
