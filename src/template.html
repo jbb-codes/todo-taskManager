@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="todo-item.js" defer></script>
+    <link rel="stylesheet" href="styles.css"> -->
+</head>
+
+<body>
+
+    <h1 class="title">Todo Task Manager</h1>
+
+    <div class="all-projects">
+        <h2 class="task-project-title">My Projects</h2>
+        <ul class="task-project" data-projects>
+        </ul>
+
+        <form action="" data-new-project-form>
+            <input type="text" class="new project" id="new-project-input" data-new-project-input
+                placeholder="new project name">
+            <label for="new-project-input"></label>
+            <button class="btn create">+</button>
+        </form>
+    </div>
+
+    <div class="todo-project" data-project-display-container>
+        <div class="todo-header">
+            <h2 class="project-title" data-project-title></h2>
+            <p class="task-count" data-task-count></p>
+        </div>
+
+        <div class="todo-body">
+            <div class="tasks" data-tasks>
+
+            </div>
+
+            <div class="new-task-creator">
+                <form action="" data-new-task-form>
+
+                    <label for="new-task-name"></label>
+                    <input type="text" class="new task" id="new-task-name" placeholder="new task name" required
+                        data-new-task-input>
+
+                    <label for="new-task-date"></label>
+                    <input type="date" id="new-task-date" placeholder="Due date" required data-new-task-date>
+
+                    <label for="new-task-priority"></label>
+                    <select name="new-task-priority" id="new-task-priority" data-new-task-priority required>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+
+                    <label for="new-task-description"></label>
+                    <textarea name="new-task-description" id="new-task-description" placeholder="Description"
+                        data-new-task-description></textarea>
+
+                    <button class="btn create">+</button>
+                </form>
+            </div>
+
+            <div class="delete-stuff">
+                <button class="btn delete" data-clear-complete-tasks-button>Clear completed tasks</button>
+                <button class="btn delete" data-delete-project-button>Delete project</button>
+            </div>
+        </div>
+    </div>
+
+    <template id="task-template">
+        <div class="task">
+
+            <!-- input 1 -->
+            <label data-template-checkbox-label>
+                <span class="custom-checkbox"></span>
+            </label>
+            <input type="checkbox" data-template-checkbox-input>
+
+            <!-- input 2 -->
+            <label data-template-date-label></label>
+            <input type="date" data-template-date-input>
+
+            <!-- input 3 -->
+            <label data-template-select-label></label>
+            <select data-template-priority-select>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <!-- input 4 -->
+            <label data-template-description-label></label>
+            <textarea placeholder="Description" data-template-description-textarea></textarea>
+        </div>
+    </template>
+</body>
+
+</html>
