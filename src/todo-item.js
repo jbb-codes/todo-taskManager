@@ -218,7 +218,7 @@ function clearElement(element) {
   }
 }
 
-export function addDefaultProject() {
+function addDefaultProject() {
   const selectedProject = projects.find(
     (project) => project.name === "Default"
   );
@@ -234,3 +234,5 @@ export function addDefaultProject() {
   projectDisplayContainer.style.display = "none";
   save();
 }
+
+addDefaultProject();
